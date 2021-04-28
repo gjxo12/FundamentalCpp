@@ -1,4 +1,5 @@
 #include <iostream>
+#pragma warning(disable:4996)
 
 class CPerson
 {
@@ -43,7 +44,7 @@ void cvs_class()
 	
 }
 
-int main()
+int placemnet_new()
 {
 	char* name = "place class test";
 	void* pData = malloc(sizeof(placeclass) + strlen(name));
