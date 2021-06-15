@@ -19,7 +19,7 @@ public:
 	int m_value;
 };
 
-int main()
+int main_copy_operator()
 {
 	CTEST t;
 	t.m_value = 5;

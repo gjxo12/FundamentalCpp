@@ -39,11 +39,28 @@ public:
 	Cmember m_member;
 };
 
+class Test
+{
+public:
+	Test() : m_val(1), m_ref(m_val), m_cval(7)
+	{
+
+	}
+	int m_val = 1;
+	int& m_ref = m_val;
+	const int m_cval = 7;
+};
+//초기화 리스트: 상수/참조 타입 초기화는 반드시 사용하기
+
 int main_initialize()
 {
 	Cchild c(1);
 	std::cout << c.m_pvalue << std::endl;
 	std::cout << c.m_member.m_mvalue << std::endl;
 	std::cout << c.m_cvalue << std::endl;
+	
+	Test t();
+
 	return 0;
 }
+
