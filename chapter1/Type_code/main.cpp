@@ -1,23 +1,23 @@
-﻿// ConsoleApplication1.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include <bitset>
-#include <atlstr.h>
+//#include <atlstr.h>
 #include <algorithm>
 #include <sstream>
 #include <vector>
+#include <string>
+//#include <stdint.h>
 using namespace std;
-#pragma warning(disable:4996)
 
 
-void Type1() {
+void TypeMinMAx() {
     int i = 1; // 2의 보수법을 사용할거라 00000.....001(32비트)
-    cout << (i << 31) << " \n";
-    cout << ~(i << 31) << "\n";
+    cout << "min signed int: " << (i << 31) << " \n";
+    cout << "max signed int: " << ~(i << 31) << "\n";
 
-    unsigned int ui = 1;
-    cout << (ui * -1) << "\n"; // 최대
+    unsigned int ui =0;
+    cout << "min unsigned int: " << ui << "\n"; // 최대
+    ui = -1;
+    cout << "max unsigned int: " << ui << "\n";;
      
 
     char c = 1; // 1바이트 부호있는 정수로도 가능: 1111,1111 ~ 0111,1111, [0000,0001] 현재 값
@@ -33,7 +33,7 @@ void Type1() {
     cout << (a << 2) << "   " << (a >> 2) << "\n";  // 8*2*2 , 8/2/2
 }
 
-void Type2() {
+void TypeRightbitOperator() {
     cout << "Practice Shift Operator.....\n";
     char c = 0x02; //0000,0010
     c >> 1; // 0000,0001
@@ -52,7 +52,7 @@ void Type2() {
     cout << int(uc) << "\n";
 }
 
-void Type3() {
+void TypeFloat() {
 
     cout << "Float....." << "\n";
     // 부호부 1 지수부 8 가수부 23 => 32bit float
@@ -62,6 +62,10 @@ void Type3() {
     // -9.6875 -> -1001,1001(binary) -> -1.0011011*2^3 [부호부 음수, 지수부 3 가수부 001,1001]
     memcpy(&f, &ui, 4);
     cout << f << "\n";
+
+    float f2 = 33554432 + 3;
+    __int64 ll2 = 33554432 + 3;
+    cout << "value f2: " << f2 << "  " << "value ll2; " << ll2 << "\n";
 
     //부동소수점: 아주 작은수와 큰 수를 표현학 위함
     //무한, Nan(not a number)
@@ -90,24 +94,21 @@ void func(char* str) { cout << "char* ..." << "\n"; }
 void func(void* str) { cout << "void*..." << "\n"; }
 void func(string str) { cout << "string..." << "\n"; }
 
-void Type4() {
+void TypeString() {
     //utf-n:Unicode를 실제 컴퓨터의 타입으로 대응시킨 것, n비트의 배수로 한 문자를 표현
     //wchar_t: UTF-16 32 를 지원하는 데이터 타입.. L매크로 사용
     Check_HangleCode(L'주');
 
     //strlen: 문자열 시작부터 NULL을 찾는데 같은 문자열에 대해서도 strlen 100번하면 100번 모두 검색...
     //실제 문자열이 저장되는 장소는 힙 영역!!  문자열은 특별한 타입이 없다!!!
-    // 문자열을 다룰때는 가능하면 해당 클래스가 제공하는 인터페이스마능ㄹ 사용해서 다루자!
-    CString str1 = "ABCDEFG";
-    cout << str1 << str1.GetLength() << "\n";
+    // 문자열을 다룰때는 가능하면 해당 클래스가 제공하는 인터페이스를 사용해서 다루자!
 
-    char* p1 = (LPSTR)str1.GetBuffer(); //문자 배열 얻음? ()안으로 해당 
-    p1[3] = '\0';
-    cout << str1 << str1.GetLength() << "\n";
+    string str2 = "ABCDEF";
+    cout << str2.c_str() << "  " << str2.size() << "\n";
 
-    string str2 = "abc가나다묭DEF";
-    transform(str2.begin(), str2.end(), str2.begin(),tolower);
-    cout << str2.c_str() << "\n";
+    string str3 = "abc가나다묭DEF";
+    transform(str3.begin(), str3.end(), str3.begin(),tolower);
+    cout << str3.c_str() << "\n";
     // 왜 한글은 꺠지는가? 한글은 2바이트!! UTF-8일땐 3바이트
     //묭: 146과 68이 10진수로 표현됨.. 146은 변환을 하지 않음! 일단 변하는 이유는 2바이트중 하나가 아스키와 중복되어 발생
     //이를 위해
@@ -120,25 +121,21 @@ void Type4() {
     //문자열은 상수로서 메모리 어딘가에 위치하는데... 결국 메모리 주소인 포인터가 가장 알맞다.
 
     func("Hello Man~~~~~"); // 컴파일러는 가장 어울리는 (const* char, char*) 를 선택
-    
-
-
-
 }
 
-void Type5() {
-    time_t t;  
-    time(&t);  // //현재 시간.
-    tm* St = localtime(&t); //  현재 tm 설정..
-    cout << St->tm_hour << "\n";  //tm 구조체의 값 확인
+// void Type5() {
+//     time_t t;  
+//     time(&t);  // //현재 시간.
+//     tm* St = localtime(&t); //  현재 tm 설정..
+//     cout << St->tm_hour << "\n";  //tm 구조체의 값 확인
     
-    St->tm_mday += 40; // 현재 가지는 시간변환
-    mktime(St); //자동 갱신.. 10 + 40 =50 -> 당월의 일수로 자동계산
-    cout << St->tm_year + 1000 << "년\n";
-    cout << St->tm_mon + 100 << "월\n";
-    cout << St->tm_mday << "일\n"; // 얘만 제대로 출력
+//     St->tm_mday += 40; // 현재 가지는 시간변환
+//     mktime(St); //자동 갱신.. 10 + 40 =50 -> 당월의 일수로 자동계산
+//     cout << St->tm_year + 1000 << "년\n";
+//     cout << St->tm_mon + 100 << "월\n";
+//     cout << St->tm_mday << "일\n"; // 얘만 제대로 출력
 
-}
+// }
 
 int GetValue() {
     int a = 1;
@@ -197,8 +194,8 @@ void Type7() {
 
 int main()
 {
-    //Type1(); // 기본 비트 연산
-    //Type2(); // 쉬프트 연산
+    TypeMinMAx(); // 기본 비트 연산
+    TypeRightbitOperator(); // 쉬프트 연산
     
     // 데이터모델: 우리가 배운 타입의 크기는 플랫폼에 따라 다르다!!.
     // char short long long (8,16,64)
@@ -207,11 +204,11 @@ int main()
     // x86 32비트 시스템은 윈도우와 리눅스 ILP32(int,long,pointer 4바이트)
     // x64 시스템은 윈도우: LLP64 리눅스: LP64
 
-    //Type3(); // flaot
+    TypeFloat(); // flaot
     //Type4(); // Charactor 
     //Type5(); //Time with struct tm
-    Type6(); // Reference
-    Type7();
+    //Type6(); // Reference
+    //Type7();
 
     return 0;
 }

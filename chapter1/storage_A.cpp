@@ -12,7 +12,7 @@ int Func1(int arg) {return 1;}
 int Func2(int arg) { return 2; }
 int Func3(int arg) { return 3; } // 중복 링크 에러
 int FuncA(int arg) { return 4; }
-double FuncA(int arg) { return 4; }
+//double FuncA(int arg) { return 4; }
 // 반환 타입이 다르다면 같은 소스 파일에 정의 불가!
 
 class aTest1 {
