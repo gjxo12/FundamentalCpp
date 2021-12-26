@@ -11,4 +11,13 @@
 # Built Visual Studio Code Extensions
 *.vsix
 
+# Build cmake file....
 *.exe
+
+.idea/*.xml
+
+build/**/*
+
+include/*
+lib/*
+bin/*

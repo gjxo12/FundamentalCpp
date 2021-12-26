@@ -31,6 +31,7 @@ void TypeMinMAx() {
 
     char a = 8; // 0000,0010
     cout << (a << 2) << "   " << (a >> 2) << "\n";  // 8*2*2 , 8/2/2
+    cout << "=====================================================================\n\n";
 }
 
 void TypeRightbitOperator() {
@@ -50,6 +51,7 @@ void TypeRightbitOperator() {
     uc = 0x82;
     uc = uc >> 1; //0100,0001 -> 양수니까 최왼쪽은 항상 0!!
     cout << int(uc) << "\n";
+    cout << "=====================================================================\n\n";
 }
 
 void TypeFloat() {
@@ -77,7 +79,7 @@ void TypeFloat() {
     memcpy(&b, &nan, 4);
     cout << a << "    " << b << "\n";
 
-
+    cout << "=====================================================================\n\n";
 }
 
 bool Check_HangleCode(wchar_t cha) {
@@ -104,23 +106,24 @@ void TypeString() {
     // 문자열을 다룰때는 가능하면 해당 클래스가 제공하는 인터페이스를 사용해서 다루자!
 
     string str2 = "ABCDEF";
-    cout << str2.c_str() << "  " << str2.size() << "\n";
+    cout << "string: " << str2.c_str() << "  size: " << str2.size() << "\n";
 
     string str3 = "abc가나다묭DEF";
-    transform(str3.begin(), str3.end(), str3.begin(),tolower);
-    cout << str3.c_str() << "\n";
+    transform(str3.begin(), str3.end(), str3.begin(),::tolower);
+    cout << "string: " << str3.c_str() << "\n";
     // 왜 한글은 꺠지는가? 한글은 2바이트!! UTF-8일땐 3바이트
     //묭: 146과 68이 10진수로 표현됨.. 146은 변환을 하지 않음! 일단 변하는 이유는 2바이트중 하나가 아스키와 중복되어 발생
     //이를 위해
     
     string test = "묭묭묭";
-    
+    cout << "String: " << test << "\n";
     //....... 나중에 한글 바이트 십진수 출력해서 확인해보기
 
     //문자열 타입 변환: 문자열은 타입이 없다! 문자열은 어떻게 인자로 넘길까??
     //문자열은 상수로서 메모리 어딘가에 위치하는데... 결국 메모리 주소인 포인터가 가장 알맞다.
 
     func("Hello Man~~~~~"); // 컴파일러는 가장 어울리는 (const* char, char*) 를 선택
+    cout << "=====================================================================\n\n";
 }
 
 // void Type5() {
@@ -205,7 +208,7 @@ int main()
     // x64 시스템은 윈도우: LLP64 리눅스: LP64
 
     TypeFloat(); // flaot
-    //Type4(); // Charactor 
+    TypeString(); // Charactor 
     //Type5(); //Time with struct tm
     //Type6(); // Reference
     //Type7();
