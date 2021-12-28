@@ -1,10 +1,10 @@
-int Func2(int arg);
-double Func2(int arg);
+// int Func2(int arg);
+// double Func2(int arg);
 
-void main()
-{
-	Func2(1);
-}
+// void main()
+// {
+// 	Func2(1);
+// }
 
 
 /*
