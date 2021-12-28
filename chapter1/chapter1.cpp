@@ -151,22 +151,22 @@ int& GetReference() {
 }
 
 void Func(int& arg) { // 좌측값
-    cout << "lvaue" << "\n";
+    cout << "This Func is lvaue" << "\n";
 }
 
 void Func(int&& arg) { // 우측값 &&두개로
-    cout << "Rvalue" << "\n";
+    cout << "This Func is Rvalue" << "\n";
 }
 
 
 
-void Type6() {
+void TypeRef() {
     //참조 타입은 포인터와 완전히 같은 방식으로 동작한다... 참조 타입을 위한 메모리 영역이 확보됨.
     const int& ra = 1; //메모리 공간이 확보되서 초기화가능
     int* pa = (int*)&ra;
-    // 참조 타입은 145line와 다르게 주소 연산자가 생략되고 간접 연산자가 생략된다.
+    // 참조 타입은 주소 연산자가 생략되고 간접 연산자가 생략된다.
     *pa = 2;
-    cout << ra << "\n";
+    cout << "&ra value: " << ra << "\n";
     // 참조 타입: 포인터 영역 마련 -> 변수의 주소가 포인터 영역에 써짐
     // cosnt: 포인터 영역 뿐 아니라, int 객체의 임시 영역에 상수 대입, -> 임시 영역의 주소가 포인터 영역에 써짐
     // 메모리 변화가 어떻게 되는지 확인해야됨....
@@ -179,9 +179,11 @@ void Type6() {
     Func(GetReference());// Lvalue Reference
     // 결국 우측값 참조역시 실제로 포인터가 사용됨... 메모리 사용에 임시 영역이 마련되고 값이 복사된 뒤에 임시 영역의 주소가 넘어감
     // 결국 참조란 포인터를 쉽게 쓰기위해 포장한 것이다!!!
+
+    cout << "=====================================================================\n\n";
 }
 
-void Type7() {
+void TypeDef() {
     //typedef 이미 알려진 타입을 새로운 이름으로 정의..? ; 필요
     typedef int ARR_INT_THREE[3]; 
     //       int arr[3];         typedef int arr[3];      typedef int ARR_INT_THREE[3];
@@ -190,7 +192,7 @@ void Type7() {
     typedef double (*Function_pointer)(int a, int b); //함수 포인터도 위와 같다...
 
     //auto: 컴파일 타임에 자동으로 타입 추론, stl과 자주 사용
-    
+    cout << "=====================================================================\n\n";
     
     
 }
@@ -210,8 +212,8 @@ int main()
     TypeFloat(); // flaot
     TypeString(); // Charactor 
     //Type5(); //Time with struct tm
-    //Type6(); // Reference
-    //Type7();
+    TypeRef(); // Reference
+    TypeDef();
 
     return 0;
 }
