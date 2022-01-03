@@ -9,6 +9,6 @@ public:
     int m_valA; // (A-2)
 };
 
-extern CTest g_test; //(4)
+extern CTest g_test(1,2); //(4)
 
 int GetValA() {return g_test.m_valA;} // (5)
