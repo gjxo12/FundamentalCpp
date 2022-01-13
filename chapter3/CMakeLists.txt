@@ -7,6 +7,10 @@ message(STATUS "Building: ${PROJECT_NAME}")
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_subdirectory(preprocess)
+option(chapter3_err "Not use Build error code" OFF)
+if(chapter3_err)
+  add_subdirectory(preprocess)
+endif()
+add_subdirectory(macro)
 
 message(STATUS ${PROJECT_NAME} )

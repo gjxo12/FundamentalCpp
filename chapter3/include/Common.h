@@ -4,7 +4,7 @@
 // 전처리: include.. "__": 동일한 디렉토리 탐색, <>면 INCLUDE환경봔수랑 /I 옵션 
 
 int g_CommonValue;     //링크 에러(중복)
-static int g_StaticValue;
+static int g_StaticValue; // 각 오브젝트파일에서만 유효한 전역 변수
 void FuncCommon()      //링크 에서(중복)
 {
 
