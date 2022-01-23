@@ -1,5 +1,5 @@
-#include "Macro.h"
-#include "Trace.h"
+#include "../include/Macro.h"
+//#include "Trace.h"
 
 int ANSI()
 {

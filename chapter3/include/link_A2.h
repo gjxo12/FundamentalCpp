@@ -1,0 +1,1 @@
+void Link_func();

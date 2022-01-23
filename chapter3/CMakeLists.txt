@@ -7,10 +7,12 @@ message(STATUS "Building: ${PROJECT_NAME}")
 
 set(CMAKE_CXX_STANDARD 17)
 
-option(chapter3_err "Not use Build error code" OFF)
-if(chapter3_err)
+#option(ALL_Option_On "Not use Build error code" OFF)
+if(ALL_Option_On)
+  add_subdirectory(link_error)
   add_subdirectory(preprocess)
 endif()
 add_subdirectory(macro)
 
+message(STATUS "ALL_Option_On: " ${ALL_Option_On} )
 message(STATUS ${PROJECT_NAME} )
