@@ -19,6 +19,7 @@ FetchContent_MakeAvailable(googletest)
 add_subdirectory(chapter1)
 add_subdirectory(chapter2)
 add_subdirectory(chapter3)
+add_subdirectory(chapter4)
 
 enable_testing()
 add_subdirectory(tests)

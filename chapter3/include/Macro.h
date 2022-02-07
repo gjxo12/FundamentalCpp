@@ -1,13 +1,13 @@
-//ANSI È£È¯ ¹Ì¸® Á¤ÀÇµÈ ¸ÅÅ©·Î
-// __FILE__  , __LINE__ : ÁÖ·Î µð¹ö±ë¿ë,·Î±ë¿ë
-// ÇöÀç ¼Ò½º ÆÄÀÏ ÀÌ¸§ __FILE__
+//ANSI í˜¸í™˜ ë¯¸ë¦¬ ì •ì˜ëœ ë§¤í¬ë¡œ
+// __FILE__  , __LINE__ : ì£¼ë¡œ ë””ë²„ê¹…ìš©,ë¡œê¹…ìš©
+// í˜„ìž¬ ì†ŒìŠ¤ íŒŒì¼ ì´ë¦„ __FILE__
 #define D_FILE_NAME __FILE__ 
 char S1_FILE_NAME[] = __FILE__;
 char S2_FILE_NAME[] = D_FILE_NAME;
 
 
 
-//ÄÄÆÄÀÏµÈ Çì´õ
-//Áßº¹µÈ ÀÛ¾÷À» ÇÑ¹ø¸¸ ÇÏµµ·Ï!!
+//ì»´íŒŒì¼ëœ í—¤ë”
+//ì¤‘ë³µëœ ìž‘ì—…ì„ í•œë²ˆë§Œ í•˜ë„ë¡!!
 //VC: pch     gcc: gch
-//°ÅÀÇ º¯ÇÏÁö ¾Ê´Â ³»¿ëÀ» ´Ü ÇÑ¹ø¸¸ ÄÄÆÄÀÏÇÏ¿© ÀçÈ°¿ë
+//ê±°ì˜ ë³€í•˜ì§€ ì•ŠëŠ” ë‚´ìš©ì„ ë‹¨ í•œë²ˆë§Œ ì»´íŒŒì¼í•˜ì—¬ ìž¬í™œìš©

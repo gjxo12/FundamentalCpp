@@ -10,4 +10,4 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(${PROJECT_NAME} A.cpp Main.cpp)
 
 message(STATUS ${PROJECT_NAME})
-#project_nameÀº ÃÖ±Ù¿¡ »ç¿ëµÈ projectÀÌ¸§ -> Àú À§¿¡ 2¹ø ¶óÀÎ¿¡ »ç¿ëµÈ project(...)
+#project_nameì€ ìµœê·¼ì— ì‚¬ìš©ëœ projectì´ë¦„ -> ì € ìœ„ì— 2ë²ˆ ë¼ì¸ì— ì‚¬ìš©ëœ project(...)

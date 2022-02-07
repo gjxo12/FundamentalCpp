@@ -1,7 +1,7 @@
 #include <iostream>
 
 extern int g_val;
-//extern int s_val;   ¸µÅ©¿¡·¯...
+//extern int s_val;   ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½...
 //
 int g_val2;
 class CTest;
@@ -18,8 +18,8 @@ int main()
     // CTest t;
     // t.m_val = 1;
     /*
-    Å¬·¡½º´Â ÀÌ ÆÄÀÏ¿¡ CTestÀÇ Á¤ÀÇ¸¦ ÇØÁà¾ßÇÑ´Ù. °¢ ¼Ò½ºÆÄÀÏ¸¶´Ù...
-    ±×·¡¼­ Çì´õÆÄÀÏ¿¡ ÀÛ¼ºÇÏ°í ¼Ò½º ÆÄÀÏ¿¡¼­ Çì´õ¸¦ Æ÷ÇÔÇÏ´Â ¹æ½ÄÀ¸·Î ÀÛ¼º
-    class_def µð·ºÅä¸®¿¡¼­ Áßº¹ Å¬·¡½º Á¤ÀÇ¸¦ »ìÆìº¸ÀÚ.
+    í´ëž˜ìŠ¤ëŠ” ì´ íŒŒì¼ì— CTestì˜ ì •ì˜ë¥¼ í•´ì¤˜ì•¼í•œë‹¤. ê° ì†ŒìŠ¤íŒŒì¼ë§ˆë‹¤...
+    ê·¸ëž˜ì„œ í—¤ë”íŒŒì¼ì— ìž‘ì„±í•˜ê³  ì†ŒìŠ¤ íŒŒì¼ì—ì„œ í—¤ë”ë¥¼ í¬í•¨í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ ìž‘ì„±
+    class_def ë””ë ‰í† ë¦¬ì—ì„œ ì¤‘ë³µ í´ëž˜ìŠ¤ ì •ì˜ë¥¼ ì‚´íŽ´ë³´ìž.
     */
 }

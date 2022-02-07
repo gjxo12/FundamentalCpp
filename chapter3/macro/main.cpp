@@ -1,8 +1,8 @@
 #include "../include/macro_A.h"
 #include "../include/macro_B.h"
 #include <stdio.h>
-// Çì´õÆÄÀÏ¿¡ Á¶°ÇºÎ ÄÄÆÄÀÏ
-// macro_B.hÀÇ defineÀº Main.cpp¿¡¼­¸¸ Á¤ÀÇµÈ´Ù. -> Áßº¹Á¤ÀÇ ¹æÁö
+// í—¤ë”íŒŒì¼ì— ì¡°ê±´ë¶€ ì»´íŒŒì¼
+// macro_B.hì˜ defineì€ Main.cppì—ì„œë§Œ ì •ì˜ëœë‹¤. -> ì¤‘ë³µì •ì˜ ë°©ì§€
 
 char* GetPlatform()
 {

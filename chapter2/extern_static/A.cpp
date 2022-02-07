@@ -1,6 +1,6 @@
 extern int g_val = 0;
 static int s_val = 0; // Link error: undefined reference...
-// A.cpp ³»ºÎ¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ´Ù!!
+// A.cpp ë‚´ë¶€ì—ì„œë§Œ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤!!
 
 
 extern int g_val2;
