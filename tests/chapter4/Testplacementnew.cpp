@@ -31,12 +31,7 @@ int foo(char* str)
 	CVSPerson* pVSPerson = (CVSPerson*)malloc(sizeof(CVSPerson) + strlen(name));
 	pVSPerson->m_Name[0] = NULL;
 	strcat(pVSPerson->m_Name, name);
-    if(strcpy(pVSPerson->m_Name,str)){
-        return 1;
-    }
-    else{
-        return 0;
-    }
+    return strcmp(pVSPerson->m_Name,name);
 }
 
 int bar(char* str)
@@ -45,19 +40,14 @@ int bar(char* str)
 	void* pData = malloc(sizeof(placeclass) + strlen(name));
 	placeclass* pl = new (pData)placeclass;
 	strcat(pl->m_Name, name);
-    if(strcpy(pl->m_Name,str)){
-        return 1;
-    }
-    else{
-        return 0;
-    }
+    return strcmp(pl->m_Name,name);
 }
 
 TEST(Placement, fist){
-    EXPECT_EQ(1, foo("Hi This is Test"));
+    EXPECT_EQ(0, foo("Hi This is Test"));
 }
 TEST(Placement, second){
-    EXPECT_EQ(1, bar("Hi This is Test"));
+    EXPECT_EQ(0, bar("Hi This is Test"));
 }
 
 
