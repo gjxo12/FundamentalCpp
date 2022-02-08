@@ -1,6 +1,13 @@
 #include <iostream>
-#pragma warning(disable:4996)
-
+#include <string.h>
+#include <memory>
+// GCC에서 placement new를 사용하기 위함, vs에서는 사용한 곳 앞뒤에 매크로 사용
+/*
+  #pragma push_macro("new")
+  #undef new
+  ....
+  #pragma pop_macro("new")
+*/
 class CPerson
 {
 public:
@@ -30,22 +37,11 @@ public:
 };
 //이처럼 가변 클래스에 생성자가 추가
 
-void cvs_class()
-{
-	CPerson* pPerson = new CPerson;
-	pPerson->m_Name = "Kim dong hwan";
-	
-	char* name = "KIM Park";
-	CVSPerson* pVSPerson = (CVSPerson*)malloc(sizeof(CVSPerson) + strlen(name));
-	//가변 크기 클래스 객체 생성
-
-	pVSPerson->m_Name[0] = NULL;
-	strcat(pVSPerson->m_Name, name);
-	
-}
 
 int placemnet_new()
 {
+	// new (ponter of memory Block) Type
+
 	char* name = "place class test";
 	void* pData = malloc(sizeof(placeclass) + strlen(name));
 	//malloc으로 실제 객체의 크기만큼 메모리만 할당 받기
@@ -54,6 +50,22 @@ int placemnet_new()
 	//이런식으로 할당된 메모리 주소 넣기!
 	// new (pointer of memory bloc) TYPE
 
-	strcat(pl->m_Name, name);
+	std::cout << strcat(pl->m_Name, name) << "\n";
+	std::cout << pl->m_Name << "\n";
 	return 0;
+}
+
+int main()
+{
+	CPerson* pPerson = new CPerson;
+	pPerson->m_Name = "Hong gildong";
+	
+	char* name = "KIM Hansu";
+	CVSPerson* pVSPerson = (CVSPerson*)malloc(sizeof(CVSPerson) + strlen(name));
+	//가변 크기 클래스 객체 생성
+
+	pVSPerson->m_Name[0] = NULL;
+	std::cout << strcat(pVSPerson->m_Name, name) << "\n";
+	std::cout << pVSPerson->m_Name << "\n";
+	placemnet_new();
 }
