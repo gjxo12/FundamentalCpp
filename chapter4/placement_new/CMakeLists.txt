@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(chapter4_basic
+project(chapter4_placementnew
   VERSION 1.0
   DESCRIPTION "Funcdmental Cplusplus chapter4/placement_new"
 )

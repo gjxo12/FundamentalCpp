@@ -12,4 +12,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_subdirectory(basic)
 add_subdirectory(placement_new)
+add_subdirectory(MemoryBlock)
 message(STATUS ${PROJECT_NAME} )
