@@ -6,7 +6,12 @@ public:
   int m_V1;
   int m_V2;
   int m_value;
+  void MemberFunc() {} // 맴버 함수는 함수 이름이 주소를 나타내는 r-value가 불가능
 };
+
+typedef void (CTest::*PFUNC) ();
+
+void Func() {};
 
 void address_addr()
 {
@@ -28,6 +33,17 @@ void address_addr()
 	}
 	//배열 이름이 메모리 블록의 주소임을 보임
 	//&로 메모리 블록의 주소를 나타냄
+}
+
+void address_func(){
+	//함수 이름이기에 주소 연산자로 이름이 곧 주소이다.
+	if(Func == &Func){
+		std:: cout << "Equals..?" << "\n";
+	}
+
+	PFUNC p1 = CTest::MemberFunc;
+	PFUNC p2 = &CTest::MemberFunc;
+	//명시적으로 함수 주소의 본체를 사용함을 나타냄
 }
 
 
@@ -52,5 +68,11 @@ int main()
 
 	std::cout << t2.m_value << "\n";
 
+	std::cout << "========== address adde ====================================\n";
+
 	address_addr();
+
+	std::cout << "========== address Function ====================================\n";
+
+	address_func();
 }
