@@ -6,11 +6,11 @@ project(Funcdmental_C++
 message(STATUS "Building: ${PROJECT_NAME}")
 set(CMAKE_CXX_STANDARD 17)
 
-
 add_subdirectory(chapter1)
 add_subdirectory(chapter2)
 add_subdirectory(chapter3)
 add_subdirectory(chapter4)
+add_subdirectory(chapter5)
 
 enable_testing()
 add_subdirectory(tests)
