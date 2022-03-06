@@ -8,5 +8,10 @@ message(STATUS "Building: ${PROJECT_NAME}")
 set(CMAKE_CXX_STANDARD 17)
 add_subdirectory(PointerArray)
 add_subdirectory(Allarray)
+add_subdirectory(VLA)
+
+add_executable(Vector
+  vector.cpp
+)
 
 message(STATUS ${PROJECT_NAME} )
