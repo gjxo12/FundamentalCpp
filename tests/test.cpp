@@ -10,12 +10,12 @@ int TypeOfTryangle(int a,int b,int c)
     else return 3;
 }
 
-TEST(TypeOfTryangle, first){
+TEST_F(TypeOfTryangle, first){
     EXPECT_EQ(-1, TypeOfTryangle(-10,20,30));
     EXPECT_EQ(-1, TypeOfTryangle(10,-20,30));
     EXPECT_EQ(-1, TypeOfTryangle(3,4,-8));
 }
-TEST(TypeOfTryangle, second){
+TEST_F(TypeOfTryangle, second){
     EXPECT_EQ(0, TypeOfTryangle(10,20,30));
     EXPECT_EQ(0, TypeOfTryangle(3,4,8));
 }

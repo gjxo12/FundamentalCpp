@@ -18,6 +18,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 add_subdirectory(chapter4)
+add_subdirectory(chapter5)
 
 add_executable(
   ${PROJECT_NAME}
@@ -31,6 +32,5 @@ target_link_libraries(
 include(GoogleTest)
 gtest_discover_tests(
     ${PROJECT_NAME}
-    #EXTRA_ARGS --gtest_output=xml:${enterprise_SOURCE_DIR}/gtest-report/
 )
 
