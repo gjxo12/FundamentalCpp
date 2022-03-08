@@ -27,6 +27,3 @@ target_link_libraries(
   gtest_main
 )
 
-message(STATUS "${gtest_SOURCE_DIR}")
-message(STATUS "${PROJECT_SOURCE_DIR}")
-

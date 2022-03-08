@@ -1,5 +1,5 @@
-#include "../include/macro_A.h"
-#include "../include/macro_B.h"
+#include "chapter3/macro_A.h"
+#include "chapter3/macro_B.h"
 #include <stdio.h>
 // 헤더파일에 조건부 컴파일
 // macro_B.h의 define은 Main.cpp에서만 정의된다. -> 중복정의 방지

@@ -9,13 +9,19 @@ set(CMAKE_CXX_STANDARD 17)
 
 # header file in chapter3
 set(Headers Common.h)
-list(TRANSFORM Headers PREPEND ${CMAKE_SOURCE_DIR}/chapter3/include/)
+list(TRANSFORM Headers PREPEND ${Funcdmental_SOURCE_DIR}/include/chapter3/)
 # include_directories(Headers chapter3/include/)
 
-add_library(preprocess01
+add_library(preprocess
   ${Headers}
   A.cpp
   B.cpp
 )
+
+target_include_directories(
+  preprocess
+  PRIVATE $<BUILD_INTERFACE:${Funcdmental_SOURCE_DIR}/include/chapter3>
+          $<INSTALL_INTERFACE:include/chapter3> $<INSTALL_INTERFACE:include>)
+
 message("chapter3 preprocess Complete!!!")
 message(STATUS ${PROJECT_NAME} )

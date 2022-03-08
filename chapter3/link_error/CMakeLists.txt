@@ -12,8 +12,8 @@ set(Headers link_A.h)
 # include_directories(Headers chapter3/include/)
 set(Headers2 link_A2.h)
 
-list(TRANSFORM Headers PREPEND ${CMAKE_SOURCE_DIR}/chapter3/include/)
-list(TRANSFORM Headers2 PREPEND ${CMAKE_SOURCE_DIR}/chapter3/include/)
+list(TRANSFORM Headers PREPEND ${Funcdmental_SOURCE_DIR}/include/chapter3/)
+list(TRANSFORM Headers2 PREPEND ${Funcdmental_SOURCE_DIR}/include/chapter3/)
 
 add_executable(link_error2
   ${Headers2}
@@ -26,6 +26,16 @@ add_executable(link_error
   ${Headers}
   main.cpp
 )
+
+target_include_directories(
+  link_error2
+  PRIVATE $<BUILD_INTERFACE:${Funcdmental_SOURCE_DIR}/include/chapter3>
+          $<INSTALL_INTERFACE:include/chapter3> $<INSTALL_INTERFACE:include>)
+
+target_include_directories(
+  link_error
+  PRIVATE $<BUILD_INTERFACE:${Funcdmental_SOURCE_DIR}/include/chapter3>
+          $<INSTALL_INTERFACE:include/chapter3> $<INSTALL_INTERFACE:include>)
 
 message("chapter3 Link_error Complete!!!")
 message(STATUS ${PROJECT_NAME} )
