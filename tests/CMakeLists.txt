@@ -32,5 +32,6 @@ target_link_libraries(
 include(GoogleTest)
 gtest_discover_tests(
     ${PROJECT_NAME}
+    EXTRA_ARGS --gtest_output=xml:${CMAKE_SOURCE_DIR}/gtest-report/
 )
 
