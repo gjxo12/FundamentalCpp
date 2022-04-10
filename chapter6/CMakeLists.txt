@@ -9,5 +9,6 @@ set(CMAKE_CXX_STANDARD 17)
 add_subdirectory(member)
 add_subdirectory(cons)
 add_subdirectory(copyoperation)
+add_subdirectory(initialzieList)
 
 message(STATUS ${PROJECT_NAME} )
