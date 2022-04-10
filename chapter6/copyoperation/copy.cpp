@@ -1,6 +1,8 @@
 #include "chapter6/copyoperation/copy.h"
 #include "chapter6/copyoperation/copy2.h"
 #include "chapter6/copyoperation/copy3.h"
+#include "chapter6/copyoperation/rvalueRef.h"
+#include "chapter6/copyoperation/equal.h"
 
 void copyop()
 {
@@ -79,10 +81,22 @@ void copyPointer()
     // 깊은 복사로 해야함.. 
 }
 
+void Equal(){
+    equal::CTest t1 = 3;
+    equal::CTest t2;
+    t2 = 3;
+    // 클래스 타입에서 등가 연산을 직접 정의해야만 등가 비교 가능
+    if(t1 == t2){
+
+    }
+}
+
 int main(int argc,char *argv[]){
     copyop();
     copyarr();
     copyPointer();
+    CText t = GetText(); // 깊은 복사로 생성할텐데.. 
+    Equal();
 }
 
 // 생성자 호출, 선처리 영역 등 잘 생각하기

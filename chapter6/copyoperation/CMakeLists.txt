@@ -13,6 +13,8 @@ list(TRANSFORM Headers PREPEND ${Funcdmental_SOURCE_DIR}/include/chapter6/copyop
 add_executable(copyoperation
   ${Headers}
   copy.cpp
+  rvalueRef.cpp
+  #noncopyable.cpp
 )
 
 target_include_directories(

@@ -1,7 +1,6 @@
 #ifndef __COPY3__H
 #define __COPY3__H
 
-#include <iostream>
 
 namespace copy3
 {
