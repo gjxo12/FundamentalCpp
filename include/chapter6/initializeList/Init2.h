@@ -1,9 +1,9 @@
-#ifndef __INITIALIZATIONLIST__H
-#define __INITIALIZATIONLIST__H
+#ifndef __INIT2__H
+#define __INIT2__H
 
 #include<iostream>
 
-namespace InitializationList
+namespace Init2
 {
     class CParent
     {
@@ -36,9 +36,10 @@ namespace InitializationList
     class CChild : public CParent
     {
         public:
-        CChild(int Arg)
+        CChild(int Arg) : CParent(Arg), m_Member(Arg+1), m_CValue(Arg+2)
         {
-
+            // 초기화 리스트에 의해 생성자의 선처리 영역에서는
+            // CParent와 CMember의 int 타입 인자를 받는 생성자를 기본 생성자 대신에 호출
         }
         int m_CValue;
         CMember m_Member;
