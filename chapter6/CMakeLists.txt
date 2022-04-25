@@ -11,5 +11,6 @@ add_subdirectory(cons)
 add_subdirectory(copyoperation)
 add_subdirectory(initialzieList)
 add_subdirectory(typeconversionoperator)
+add_subdirectory(inheritane)
 
 message(STATUS ${PROJECT_NAME} )
