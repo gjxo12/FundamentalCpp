@@ -1,5 +1,7 @@
 #include <string.h>
 #include <memory>
+#ifndef __FRINED__H
+#define __FRIEND__H
 #define OPERATOR_PLUS_LPCSTR
 class CTestString
 {
@@ -21,3 +23,5 @@ private:
     class impl;
     std::unique_ptr<impl> Pimpl;
 };
+
+#endif
