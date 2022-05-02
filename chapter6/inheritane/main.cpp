@@ -15,14 +15,27 @@ void basicMemberFunction()
     p3 = 1; // 일반 대입 연산자
 
     chapter6::inheritance::basicmemberChild c1;
-    c1.m_PVal=1;
-    c1.m_CVal=2;
+    c1.m_PVal = 1;
+    c1.m_CVal = 2;
 
     chapter6::inheritance::basicmemberChild c2;
-    c2 = c1; // 복사 대입..??
+    c2 = c1; // 복사 대입..?? 이는 암시적 복사 대입 연산자가 부모의 복사 대입 연산자 호출한것!
+    // 명시적으로 복사대입 연산자가 없다면 필요할때 암시적으로 연산자 추가-> 부모와 맴버 클래스의 복사 대입 연산자 호출
 
     chapter6::inheritance::basicmemberChild c3;
-    c3 = 1;  // Why compile error..??
+    // c3 = 1;  // Why compile error..?? answer is up!
+}
+
+void typeConversionInheritance()
+{
+    chapter6::inheritance::basicmember p;
+    p.m_PVal = 1;
+    int i = p; // class -> int
+
+    chapter6::inheritance::basicmemberChild c;
+    c.m_PVal=1;
+    c.m_CVal=2;
+    int j = c; //Child -> int
 }
 
 int main()
@@ -48,4 +61,8 @@ int main()
     std::cout << "=====================================================";
 
     basicMemberFunction();
+
+    std::cout << "=====================================================";
+
+    typeConversionInheritance();
 }
