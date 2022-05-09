@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(extern_static
+project(chapter2.extern_static
   VERSION 1.0
   DESCRIPTION "Funcdmental Cplusplus chapter2/extern_static"
 )

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(class_def
+project(chapter2.class_def
   VERSION 1.0
   DESCRIPTION "Funcdmental Cplusplus chapter2/Class_def"
 )
