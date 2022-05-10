@@ -14,5 +14,9 @@ if(ALL_Option_On)
 endif()
 add_subdirectory(macro)
 
+include(../cmake/MultiTarget.cmake)
+get_custom_target(chapter3)
+
+
 message(STATUS "ALL_Option_On: " ${ALL_Option_On} )
 message(STATUS ${PROJECT_NAME} )

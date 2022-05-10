@@ -13,4 +13,8 @@ set(CMAKE_CXX_STANDARD 17)
 add_subdirectory(basic)
 add_subdirectory(placement_new)
 add_subdirectory(MemoryBlock)
+
+include(../cmake/MultiTarget.cmake)
+get_custom_target(chapter4)
+
 message(STATUS ${PROJECT_NAME} )

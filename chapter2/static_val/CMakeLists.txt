@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(chapter2.static_val
+project(static_val
   VERSION 1.0
   DESCRIPTION "Funcdmental Cplusplus chapter2/static_val"
 )

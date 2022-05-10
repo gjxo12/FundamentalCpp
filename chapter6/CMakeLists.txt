@@ -14,6 +14,7 @@ add_subdirectory(typeconversionoperator)
 add_subdirectory(inheritane)
 
 
-
+include(../cmake/MultiTarget.cmake)
+get_custom_target(chapter6)
 
 message(STATUS ${PROJECT_NAME} )
