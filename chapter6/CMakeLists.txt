@@ -12,5 +12,6 @@ add_subdirectory(copyoperation)
 add_subdirectory(initialzieList)
 add_subdirectory(typeconversionoperator)
 add_subdirectory(inheritane)
+add_subdirectory(multiinheritance)
 
 message(STATUS ${PROJECT_NAME} )
