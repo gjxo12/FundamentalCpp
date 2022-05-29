@@ -13,6 +13,15 @@ add_subdirectory(chapter4)
 add_subdirectory(chapter5)
 add_subdirectory(chapter6)
 
+#include(cmake/SuperBuild.cmake)
+#get_all_targets(all_target ${Funcdmental_SOURCE_DIR})
+
+#foreach(all_target ${all_target})
+    #add_dependencies(${all_target} library1)
+    #add_dependencies(${all_target} library2)
+#    set_target_properties(${all_target} PROPERTIES FOLDER Funcdmental)
+#  endforeach()
+
 enable_testing()
 add_subdirectory(tests)
 

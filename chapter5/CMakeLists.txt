@@ -14,4 +14,7 @@ add_executable(Vector
   vector.cpp
 )
 
+include(../cmake/MultiTarget.cmake)
+get_custom_target(chapter5)
+
 message(STATUS ${PROJECT_NAME} )

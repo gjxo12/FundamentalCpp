@@ -11,4 +11,7 @@ add_subdirectory(class_def)
 add_subdirectory(extern_static)
 add_subdirectory(static_val)
 
+include(../cmake/MultiTarget.cmake)
+get_custom_target(chapter2)
+
 message(STATUS ${PROJECT_NAME} )
