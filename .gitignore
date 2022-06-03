@@ -13,12 +13,10 @@
 
 # Build cmake file....
 *.exe
-
 .idea/*.xml
-
 build/**/*
-
 lib/*
 bin/*
-
 gtest_report/*
+out/*
+.vs/*
