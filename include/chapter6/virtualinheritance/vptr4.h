@@ -19,7 +19,7 @@ class CD2B : virtual public CD1B
 public:
     int m_D2B;
 };
-class CD3 : virtual public CD2A, virtual public CD2B // 여기에 virtual 키워드가 없다면? 어떻게 메모리 구조가 나올까??
+class CD3 : virtual public CD2A, virtual public CD2B
 {
 public:
     int m_D3;

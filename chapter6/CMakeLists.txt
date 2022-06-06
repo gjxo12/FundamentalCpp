@@ -13,7 +13,7 @@ add_subdirectory(initialzieList)
 add_subdirectory(typeconversionoperator)
 add_subdirectory(inheritane)
 add_subdirectory(multiinheritance)
-
+#add_subdirectory(classtypeconversion)
 
 include(../cmake/MultiTarget.cmake)
 get_custom_target(chapter6)
