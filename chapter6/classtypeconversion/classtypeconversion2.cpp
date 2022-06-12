@@ -3,7 +3,7 @@
 using chapter6::classconversion::CParent;
 using chapter6::classconversion::CChild;
 
-int main()
+int classtypeconversion2()
 {
     CChild c;
     c.m_Parent = 1;

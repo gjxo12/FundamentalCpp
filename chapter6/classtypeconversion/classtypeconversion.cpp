@@ -2,7 +2,7 @@
 
 using chapter6::classconversion::CTestB;
 
-int main()
+int classtypeconversion()
 {
     chapter6::classconversion::CTestA ta;
     ta.m_Test = 7;

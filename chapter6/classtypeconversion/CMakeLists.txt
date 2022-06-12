@@ -10,15 +10,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(Headers)
 list(TRANSFORM Headers PREPEND ${Funcdmental_SOURCE_DIR}/include/chapter6/)
 
-add_library(classtypeconversion
+add_executable(classtypeconversion
   ${Headers}
-  INTERFACE
+  main.cpp
 )
 
 target_include_directories(
   classtypeconversion
-  INTERFACE
-  $<BUILD_INTERFACE:${Funcdmental_SOURCE_DIR}/include/>
+  PRIVATE $<BUILD_INTERFACE:${Funcdmental_SOURCE_DIR}/include/>
   $<INSTALL_INTERFACE:include/chapter6> $<INSTALL_INTERFACE:include>
 )
 
