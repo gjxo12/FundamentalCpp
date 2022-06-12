@@ -1,3 +1,6 @@
+#ifndef __CLASSINHERITANCE__H
+#define __CLASSINHERITANCE__H
+
 namespace chapter6
 {
     namespace classinheritance

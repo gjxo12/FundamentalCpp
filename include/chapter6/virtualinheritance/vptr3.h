@@ -1,3 +1,6 @@
+#ifndef __VPTR3__H
+#define __VPTR3__H
+
 class CD1A
 {
 public:
@@ -38,3 +41,5 @@ public:
     |           |
 1-- CD1A       CD1B --3
 */
+
+#endif

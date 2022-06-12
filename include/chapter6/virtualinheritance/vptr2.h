@@ -1,3 +1,6 @@
+#ifndef __VPTR2__H
+#define __VPTR2__H
+
 class CD1A
 {
 public:
@@ -14,7 +17,7 @@ class CD2 : public CD1A, virtual public CD1B // CD1B만 가상 상속
 {
 public:
     int m_D2;
-}
+};
 
 //여기서의 메모리 구조는..?
 /*
@@ -29,3 +32,4 @@ CD2  |   CD2`---------------------------|
 */
 //오프셋은 vptr.h와 같이 됨
 
+#endif
