@@ -12,6 +12,7 @@ add_subdirectory(chapter3)
 add_subdirectory(chapter4)
 add_subdirectory(chapter5)
 add_subdirectory(chapter6)
+add_subdirectory(chapter7)
 
 #include(cmake/SuperBuild.cmake)
 #get_all_targets(all_target ${Funcdmental_SOURCE_DIR})
