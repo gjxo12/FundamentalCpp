@@ -7,5 +7,13 @@ message(STATUS "Building: ${PROJECT_NAME}")
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(${PROJECT_NAME} Test1.c Test2.cpp)
+set(Headers)
+list(TRANSFORM Headers PREPEND ${Funcdmental_SOURCE_DIR}/include/chapter7/)
+
+add_executable(${PROJECT_NAME} 
+${Headers}
+Test1.c Test2.cpp)
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${Funcdmental_SOURCE_DIR}/include/)
+
 message(STATUS ${PROJECT_NAME})
