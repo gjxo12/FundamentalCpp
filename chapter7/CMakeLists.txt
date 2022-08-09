@@ -7,5 +7,6 @@ message(STATUS "Building: ${PROJECT_NAME}")
 
 set(CMAKE_CXX_STANDARD 17)
 add_subdirectory(externC)
+add_subdirectory(callby)
 
 message(STATUS ${PROJECT_NAME} )
