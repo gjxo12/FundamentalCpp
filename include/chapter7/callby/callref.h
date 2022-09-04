@@ -59,7 +59,13 @@ namespace chapter7
         };
         void vFunc(CParent arg) {arg.VFunc();}
         
-
+        class CTest
+        {
+            public:
+            CTest(int arg) {}
+        };
+        void FuncTest(const CTest& arg){}
+        // const TYPE&
 
     } // namespace callref
 
