@@ -13,6 +13,7 @@ namespace chapter7
         };
 
         CTest Func();
+        CTest &Func_ref();
 
         __declspec(align(1)) class CTest2{
             public:
