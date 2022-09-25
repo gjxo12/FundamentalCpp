@@ -11,5 +11,6 @@ add_subdirectory(externC)
 add_subdirectory(callby)
 add_subdirectory(returnType)
 add_subdirectory(variableArg)
+add_subdirectory(classMemberFunctoin)
 
 message(STATUS ${PROJECT_NAME} )
