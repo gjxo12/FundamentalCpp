@@ -12,5 +12,6 @@ add_subdirectory(callby)
 add_subdirectory(returnType)
 add_subdirectory(variableArg)
 add_subdirectory(classMemberFunctoin)
+add_subdirectory(Functor)
 
 message(STATUS ${PROJECT_NAME} )
