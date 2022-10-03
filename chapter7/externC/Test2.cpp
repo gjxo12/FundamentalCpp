@@ -1,7 +1,6 @@
 #include "chapter7/externC/externC.h"
 
-
-//void Func(int arg);
+// void Func(int arg);
 extern "C" void Func(int arg) {}
 
 extern "C"

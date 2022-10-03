@@ -5,17 +5,17 @@
 
 typedef int TARR[1];
 
-TARR* FuncArr()// 함수는 배열을 반환할 수 없다.. TARR* 타입이 필요하다..
+TARR *FuncArr() // 함수는 배열을 반환할 수 없다.. TARR* 타입이 필요하다..
 {
     int arg[1] = {0};
-    return (TARR*)arg;
+    return (TARR *)arg;
 }
 
-int& rFunc(){
+int &rFunc()
+{
     int ret = 1;
     return ret;
 }
-
 
 int main()
 {
@@ -25,5 +25,5 @@ int main()
     // call by reference
     int r = rFunc(); // 혹시 int& r 이라면..? 반환 결과가 스택에 있다.. 이 경우 참조 타입 변수로 받아선 위험함!
 
-    return 0;   
+    return 0;
 }

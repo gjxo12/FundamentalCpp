@@ -37,34 +37,37 @@ namespace chapter7
          * 참조는 클래스 객체의 주소를 스택에 추가함:
          */
 
-        //복사 손실
-        class CParent{
-            public:
-            virtual void VFunc(){
+        // 복사 손실
+        class CParent
+        {
+        public:
+            virtual void VFunc()
+            {
                 std::cout << "CParent::VFunc\n";
-                std::cout << "m_Parent: " <<m_Parent << "\n";
+                std::cout << "m_Parent: " << m_Parent << "\n";
             }
             int m_Parent;
         };
         class CChild : public CParent
         {
-            public:
+        public:
             virtual void VFunc()
             {
-                std::cout << "CChild::VFunc" << "\n";
+                std::cout << "CChild::VFunc"
+                          << "\n";
                 std::cout << "m_Parent: " << m_Parent << "\n";
                 std::cout << "m_Chiiild: " << m_Child << "\n";
             }
             int m_Child;
         };
-        void vFunc(CParent arg) {arg.VFunc();}
-        
+        void vFunc(CParent arg) { arg.VFunc(); }
+
         class CTest
         {
-            public:
+        public:
             CTest(int arg) {}
         };
-        void FuncTest(const CTest& arg){}
+        void FuncTest(const CTest &arg) {}
         // const TYPE&
 
     } // namespace callref

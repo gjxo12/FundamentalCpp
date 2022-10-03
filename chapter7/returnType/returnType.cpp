@@ -3,18 +3,19 @@
 using chapter7::returnType::CTest;
 using chapter7::returnType::CTest2;
 
-CTest Func() {
+CTest Func()
+{
     CTest t;
     t.m_V = 1;
     // t영역의 8 byte 확보
     return t;
-    //여기서 반환 값을 설정: assembly 확인!
-    // eax = t.m_E
-    // edx = t.m_V
-    
+    // 여기서 반환 값을 설정: assembly 확인!
+    //  eax = t.m_E
+    //  edx = t.m_V
 }
 
-CTest &Func_ref(){
+CTest &Func_ref()
+{
     CTest tt;
     tt.m_V = 1;
     return tt;
@@ -23,10 +24,11 @@ CTest &Func_ref(){
     // 클래스를 반환할때 거의 대부분 참조타입.
 }
 
-CTest2 Func2() {
+CTest2 Func2()
+{
     CTest2 t2;
     t2.m_V = 1;
-    //t영역 12byte 확보
+    // t영역 12byte 확보
     return t2;
     // 8바이트보다 큰 클래스 반환 타입이라면??
     // CTest의 크기가 12라면 두 배 크기인 24를 스택에 마련해 놓을것이다.
@@ -40,6 +42,4 @@ CTest2 Func2() {
  * callee는 반환 인자 영역에 반환 값을 복사하고 종료
  * 그 후 caller는 반환 인자 영역에서 반환 임시 영역으로 반환 결과를 옮김
  * 컴파일러는 최적화를 수행할텐데.. 우리는 동작 원리를 보고싶다..
-*/
-
-
+ */

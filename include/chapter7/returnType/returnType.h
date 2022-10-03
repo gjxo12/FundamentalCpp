@@ -7,7 +7,7 @@ namespace chapter7
     {
         class CTest
         {
-            public:
+        public:
             int m_E;
             int m_V;
         };
@@ -15,13 +15,13 @@ namespace chapter7
         CTest Func();
         CTest &Func_ref();
 
-        __declspec(align(1)) class CTest2{
-            public:
+        __declspec(align(1)) class CTest2
+        {
+        public:
             int m_E[8];
             int m_V;
         };
         CTest2 Func2();
-
 
     }
 }

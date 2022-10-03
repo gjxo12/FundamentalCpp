@@ -11,37 +11,34 @@ thiscall: 맴버 함수의 필수 인자인 this를 넘기는 규칙이 포함�
 
 #include "chapter7/memberfunc/memberfunc.h"
 
-using chapter7::memberfunc::CTest;
-using chapter7::memberfunc::Cparent;
 using chapter7::memberfunc::CChild;
-using chapter7::memberfunc::NeedConst;
 using chapter7::memberfunc::ChildConst;
-
+using chapter7::memberfunc::Cparent;
+using chapter7::memberfunc::CTest;
+using chapter7::memberfunc::NeedConst;
 
 int main()
 {
-    CTest* pT = nullptr; // this는 NULL
+    CTest *pT = nullptr; // this는 NULL
     pT->Func1();
-    //pT->Func2(); // runtime error.. m_Value 접근..
-    pT->vFunc(); 
+    // pT->Func2(); // runtime error.. m_Value 접근..
+    pT->vFunc();
     // vFunc가 가상함수로 인해 vfptr 가상 함수 테ㅔ이블을 가리티는 포인터를 맴버로 가지게됨
     // 호출할때 무조건 vfptr을 참조하므로 this가 잘못될 경우..? 예외..
     // 가상 함수는 vfptr을 참조함으로 비정적 맴버 함수만 가능: static과 양립할수 없다...
 
     CChild c;
     c.Func1(1);
-    //c.Func1(); why this code is commpile error??
+    // c.Func1(); why this code is commpile error??
 
-    c.Func(1); // 이것은 CChild이 Func()이다. 가까운 범위 내에서 함수를 찾는다
+    c.Func(1);            // 이것은 CChild이 Func()이다. 가까운 범위 내에서 함수를 찾는다
     c.Cparent::Func(1.0); // 이렇게. 부모::함수이름 으로 사용할수 있다!!!
-    
 
-    const CTest ct; 
+    const CTest ct;
     ct.Func(); // const 맴버 함수는 모든 객체에 대해 호출 가능
 
-    CTest t; 
-    t.Func();  // 비 const 맴버 함수는 비 const 객체만 호출 가능
-
+    CTest t;
+    t.Func(); // 비 const 맴버 함수는 비 const 객체만 호출 가능
 
     // const ChildConst c;
     // const NeedConst* pP = &c;
@@ -52,8 +49,8 @@ int main()
     ct.constFunc();
     // 어떤것을 호출할지 쉽게 알수있음.
 
-    //STL 만들어보기
-    std::map<CTest,CTest*> test_map;
+    // STL 만들어보기
+    std::map<CTest, CTest *> test_map;
     CTest ttt;
     test_map[ttt] = &t;
 
@@ -64,7 +61,4 @@ int main()
      * const 키워드가 가상함수에서 꽤 필요: 가상함수 장에서..
      * STL 호환 클래스에서 const 맴버 함수가 필요할수 있다...
      */
-
-
 }
-
