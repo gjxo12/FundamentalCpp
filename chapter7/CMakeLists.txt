@@ -13,5 +13,6 @@ add_subdirectory(returnType)
 add_subdirectory(variableArg)
 add_subdirectory(classMemberFunctoin)
 add_subdirectory(Functor)
+add_subdirectory(lambda)
 
 message(STATUS ${PROJECT_NAME} )
