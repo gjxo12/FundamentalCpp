@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "chapter8/animal.h"
 class CParent
 {
 public:
@@ -20,6 +20,11 @@ public:
     int m_Child;
 };
 
+using chapter8::animal::CAnimal;
+using chapter8::animal::CCat;
+using chapter8::animal::CDog;
+using chapter8::animal::CPig;
+
 int main()
 {
     CParent* pParent = new CChild;
@@ -33,5 +38,13 @@ int main()
     // 가상 맴버함수의 경우 실제 타입 클래스인 CCHild의 VFunc이 호출
 
     delete pParent;
+
+    CAnimal* pAnimal = NULL;
+    
+    pAnimal = new CPig;
+    chapter8::animal::PlayAnimalSound(pAnimal);
+    // 이런식으로 어떤 다른 동물이 추가되더라도 이 함수는 수정할 필요가 없다.
+    // 미래에 추가될 어떤 클래스 타입에 대해 기존 ㅋ코드로 대응
+    // 인터페이스(부모 클래스)로 사용하고 실제타입으로 다시 변환할 필요가 없다..
 
 }
