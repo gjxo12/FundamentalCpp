@@ -1,5 +1,5 @@
 #include <iostream>
-#include "chapter8/animal.h"
+#include "chapter8/basic/animal.h"
 class CParent
 {
 public:
