@@ -10,5 +10,6 @@ set(CMAKE_CXX_STANDARD 17)
 add_subdirectory(basic)
 add_subdirectory(inheritanceVirtual)
 add_subdirectory(vfuncCall)
+add_subdirectory(vconsdes)
 
 message(STATUS ${PROJECT_NAME} )
