@@ -5,7 +5,11 @@ This repository is for Fundamental C++.
 
 It is originally using Visual Studio Compiler(vc++), but here I have a build generator using [cmake].
 
-Using GCC 10.x as my environment standard and set C++17 syntax as the default in my setting
+~~Using GCC 10.x as my environment standard and set C++17 syntax as the default in my setting~~
+
+using Mingw GCC 10.x, VScode intellisense not work...
+
+so using VS 2022 Compiler maybe c++20 feature.
 
 Using [vscode] and cmake plugin and c++ debug plugin in my setting.
 
