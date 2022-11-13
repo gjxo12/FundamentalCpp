@@ -4,7 +4,13 @@ project(Funcdmental
   DESCRIPTION "Funcdmental Cplusplus"
 )
 message(STATUS "Building: ${PROJECT_NAME}")
-set(CMAKE_CXX_STANDARD 17)
+#set(CMAKE_CXX_STANDARD 20)
+
+include(cmake/Warning.cmake)
+
+if(MSVC)
+add_compile_options(/std:c++20 ${MSVC_options})
+endif()
 
 add_subdirectory(chapter1)
 add_subdirectory(chapter2)
