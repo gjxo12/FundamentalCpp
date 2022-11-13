@@ -2,6 +2,8 @@
 
 using chapter8::vconsdes::CParent;
 using chapter8::vconsdes::CChild;
+using chapter8::vconsdes::ConsParent;
+using chapter8::vconsdes::ConsChild;
 
 void test()
 {
@@ -18,5 +20,10 @@ void test()
 
 int main()
 {
+    ConsChild c;
+    // 왜 실제 타입의 클래스가 호출되지 않았나? 
+    // ConsChild의 생성자에 의해 ConsParent 생성자를 호출
+    // ConsParent의 생성자에서 호출하는 가상 함수는 CParent의 VFunc이다...
+    // 이렇듯 의도와 다르니 생성자 안에서 가상 함수 호출은 제대로 알고 사용해야한다..
     return 0;
 }
