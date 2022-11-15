@@ -9,14 +9,17 @@ It is originally using Visual Studio Compiler(vc++), but here I have a build gen
 
 using Mingw GCC 10.x, VScode intellisense not work...
 
-so using VS 2022 Compiler maybe c++20 feature.
+so use Visual Studio 2022 Compiler, maybe with c++20 feature.
+
+If there is a chance, I'll also set the LINUX GNUC settings with CMake
 
 Using [vscode] and cmake plugin and c++ debug plugin in my setting.
 
 Check out the **CmakeLists.txt file**
 
 ## Requirements for Windows
- - GCC compiler: gcc version 10.2.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project)
+ - ~~GCC compiler: gcc version 10.2.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project)~~
+ - Visual Studio 2022 
  - cmake >= 3.15
 
 ## Test Framework
