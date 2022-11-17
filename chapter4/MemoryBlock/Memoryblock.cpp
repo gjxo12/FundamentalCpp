@@ -41,7 +41,7 @@ void address_func(){
 		std:: cout << "Equals..?" << "\n";
 	}
 
-	PFUNC p1 = CTest::MemberFunc;
+	//PFUNC p1 = CTest::MemberFunc; 컴파일에러.. 
 	PFUNC p2 = &CTest::MemberFunc;
 	//명시적으로 함수 주소의 본체를 사용함을 나타냄
 }
