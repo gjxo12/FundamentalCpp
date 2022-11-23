@@ -12,5 +12,6 @@ add_subdirectory(inheritanceVirtual)
 add_subdirectory(vfuncCall)
 add_subdirectory(vconsdes)
 add_subdirectory(purevirtual)
+add_subdirectory(multiinheritvirtual)
 
 message(STATUS ${PROJECT_NAME} )
