@@ -6,7 +6,7 @@ project(chapter8.this
 message(STATUS "Building: ${PROJECT_NAME}")
 
 set(CMAKE_CXX_STANDARD 17)
-set(Headers this.h)
+set(Headers this.h thunk.h)
 list(TRANSFORM Headers PREPEND ${Funcdmental_SOURCE_DIR}/include/chapter8/this)
 
 
