@@ -44,6 +44,6 @@ int main()
     // 
     pAS = &Add;
     pAS = &Subtrack;
-    pAS = &Divide; // 반환 타입과 인자타입을 보자.. 
+    pAS = &Divide; // 반환 타입과 인자타입을 보자.. devide 함수가 pAS의 반환 타입, 인자타입과 어떻게 되는가?
     pDivide = &Devide;
 }
