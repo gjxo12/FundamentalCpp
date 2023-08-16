@@ -11,4 +11,8 @@ add_executable(${PROJECT_NAME}
 thisWithFp.cpp
 )
 
+add_executable(chapter9.sizeOfFp
+sizeOfFp.cpp
+)
+
 message(STATUS ${PROJECT_NAME})
